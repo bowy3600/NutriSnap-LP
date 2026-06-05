@@ -41,11 +41,11 @@ export const Team = () => (
       <div className="relative overflow-hidden rounded-2xl border border-white/10 md:col-span-5">
         <div className="relative aspect-[4/5]">
           <img
-            src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80"
+            src="https://customer-assets.emergentagent.com/job_nutrisnap-demo/artifacts/zt3usoa4_Design%20sans%20titre%20%283%29.png"
             alt="Malik Aliane — CEO & Fondateur"
-            className="h-full w-full object-cover grayscale"
+            className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
           <div className="absolute left-4 bottom-4">
             <div className="text-[10px] uppercase tracking-[0.22em] text-mint">
               CEO · Fondateur
