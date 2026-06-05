@@ -6,7 +6,7 @@ export const Footer = () => (
     <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
       <div className="grid gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
-          <Logo className="h-7 w-auto" />
+          <Logo className="h-12 w-auto md:h-14" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
             NutriSnap est le co-pilote IA santé & performance. Conçu à Paris,
             entraîné sur la donnée nutrition la plus fine d'Europe.

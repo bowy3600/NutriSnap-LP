@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { NS } from "@/constants/testIds";
 import { Logo, ApertureMark } from "./Brand";
-import { ArrowUpRight, PlayCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -57,19 +57,11 @@ export const Hero = () => {
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <button
-                data-testid={NS.heroCtaDemo}
-                onClick={() => scrollTo("section-solution")}
-                className="group inline-flex items-center gap-2 rounded-full bg-mint px-6 py-3 text-sm font-semibold text-black shadow-[0_0_24px_rgba(110,234,177,0.35)] transition-all hover:shadow-[0_0_44px_rgba(110,234,177,0.6)]"
-              >
-                <PlayCircle size={18} />
-                Voir la démo
-              </button>
-              <button
                 data-testid={NS.heroCtaInvestor}
                 onClick={() => scrollTo("section-contact")}
-                className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-all hover:border-mint hover:text-mint"
+                className="group inline-flex items-center gap-2 rounded-full bg-mint px-7 py-3.5 text-sm font-semibold text-black shadow-[0_0_24px_rgba(110,234,177,0.35)] transition-all hover:shadow-[0_0_44px_rgba(110,234,177,0.6)]"
               >
-                Recevoir le pitch deck
+                Devenir investisseur · Prendre rdv
                 <ArrowUpRight
                   size={16}
                   className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

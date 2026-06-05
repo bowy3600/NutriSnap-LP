@@ -21,14 +21,14 @@ export const Header = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-10">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10">
         <button
           onClick={() => scrollTo("section-hero")}
           data-testid={NS.headerLogo}
           className="flex items-center"
           aria-label="NutriSnap"
         >
-          <Logo className="h-7 w-auto" />
+          <Logo className="h-11 w-auto md:h-12" />
         </button>
 
         <nav className="hidden items-center gap-9 md:flex">
