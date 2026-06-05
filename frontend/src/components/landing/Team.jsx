@@ -2,36 +2,23 @@ import React from "react";
 import { Section } from "./Section";
 import { NS } from "@/constants/testIds";
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Trophy, Dumbbell, Brain, Linkedin } from "lucide-react";
 
-const team = [
+const credentials = [
   {
-    name: "Camille Aubert",
-    role: "CEO · Co-fondatrice",
-    bio: "Ex-Doctolib, INSEAD MBA. 10 ans à la croisée santé & produit.",
-    photo:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    icon: <Trophy size={18} />,
+    title: "Champion du Monde & d'Europe",
+    text: "Muay Thai · sport de combat de haut niveau.",
   },
   {
-    name: "Hugo Lefèvre",
-    role: "CTO · Co-fondateur",
-    bio: "Ex-Mistral AI, ENS Ulm. Vision IA et infra ML temps réel.",
-    photo:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+    icon: <Dumbbell size={18} />,
+    title: "91 combats professionnels",
+    text: "Une connaissance terrain unique du corps de l'athlète.",
   },
   {
-    name: "Dr. Léa Moreno",
-    role: "Chief Nutrition Officer",
-    bio: "PhD Nutrition Sportive, ex-INSEP. Conseille les athlètes olympiques.",
-    photo:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Mathis Granger",
-    role: "Head of Growth",
-    bio: "Ex-Lydia, ex-Wellhub. 0→1M utilisateurs sur 3 apps santé.",
-    photo:
-      "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?auto=format&fit=crop&w=800&q=80",
+    icon: <Brain size={18} />,
+    title: "18 ans de coaching sportif",
+    text: "France & international · accompagnement athlètes et grand public.",
   },
 ];
 
@@ -39,52 +26,83 @@ export const Team = () => (
   <Section
     id="section-team"
     testId={NS.sectionTeam}
-    eyebrow="Équipe"
-    title="Une équipe à l'intersection IA, santé et produit."
-    subtitle="Des opérateurs aguerris, déjà passés par les meilleures scale-ups françaises et européennes."
+    eyebrow="L'équipe"
+    title="Un projet né du terrain. Pas d'une slide."
+    subtitle="NutriSnap est porté par un opérateur du sport de haut niveau, expert en performance et nutrition appliquée, transposant cette expertise au grand public via l'IA."
   >
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {team.map((m, i) => (
-        <motion.div
-          key={m.name}
-          initial={{ opacity: 0, y: 22 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: i * 0.06 }}
-          className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0d]"
-        >
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img
-              src={m.photo}
-              alt={m.name}
-              className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-          </div>
-          <div className="p-5">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <h3 className="font-display text-lg font-semibold text-white">
-                  {m.name}
-                </h3>
-                <div className="text-xs uppercase tracking-[0.18em] text-mint">
-                  {m.role}
-                </div>
-              </div>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/55 transition-colors hover:border-mint hover:text-mint"
-              >
-                <Linkedin size={14} />
-              </a>
+    <motion.div
+      initial={{ opacity: 0, y: 22 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="grid gap-6 rounded-3xl border border-white/10 bg-[#0c0c0d] p-6 md:grid-cols-12 md:p-8"
+    >
+      {/* Photo / visual */}
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 md:col-span-5">
+        <div className="relative aspect-[4/5]">
+          <img
+            src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80"
+            alt="Malik Aliane — CEO & Fondateur"
+            className="h-full w-full object-cover grayscale"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+          <div className="absolute left-4 bottom-4">
+            <div className="text-[10px] uppercase tracking-[0.22em] text-mint">
+              CEO · Fondateur
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-white/60">
-              {m.bio}
-            </p>
+            <div className="font-display text-2xl font-bold text-white">
+              Malik Aliane
+            </div>
           </div>
-        </motion.div>
-      ))}
-    </div>
+        </div>
+      </div>
+
+      {/* Bio + credentials */}
+      <div className="md:col-span-7">
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="font-display text-2xl font-semibold text-white">
+            Du ring au laboratoire IA.
+          </h3>
+          <a
+            href="#"
+            aria-label="LinkedIn de Malik Aliane"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-mint hover:text-mint"
+          >
+            <Linkedin size={16} />
+          </a>
+        </div>
+        <p className="mt-4 text-sm leading-relaxed text-white/65">
+          Malik a passé sa vie à optimiser le corps de l'athlète — pour
+          lui-même, puis pour des centaines d'autres. NutriSnap est le
+          prolongement logique de cette expertise&nbsp;: une IA construite avec
+          les exigences du haut niveau, rendue accessible à tous via une simple
+          photo.
+        </p>
+
+        <div className="mt-7 grid gap-3 sm:grid-cols-3">
+          {credentials.map((c) => (
+            <div
+              key={c.title}
+              className="rounded-xl border border-white/10 bg-white/[0.02] p-4"
+            >
+              <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-mint/10 text-mint">
+                {c.icon}
+              </div>
+              <div className="font-display text-sm font-semibold text-white">
+                {c.title}
+              </div>
+              <div className="mt-1 text-xs text-white/55">{c.text}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-7 rounded-xl border border-white/10 bg-black/40 p-4 text-xs leading-relaxed text-white/60">
+          <span className="text-mint">Équipe en construction</span> — recherche
+          active d'un(e) <span className="text-white">CTO/Lead IA</span> et
+          d'un(e) <span className="text-white">Head of Growth</span> pour
+          accompagner la phase de lancement.
+        </div>
+      </div>
+    </motion.div>
   </Section>
 );

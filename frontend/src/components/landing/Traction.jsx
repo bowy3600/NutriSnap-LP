@@ -4,19 +4,19 @@ import { NS } from "@/constants/testIds";
 import { motion } from "framer-motion";
 
 const kpis = [
-  { value: "12,4k", label: "Utilisateurs en bêta privée" },
-  { value: "94%", label: "Rétention J30" },
-  { value: "4,8/5", label: "Score satisfaction (NPS 71)" },
-  { value: "2,1M", label: "Repas analysés à ce jour" },
+  { value: "80%", label: "MVP déjà fonctionnel" },
+  { value: "51k", label: "MAU cible · fin année 1" },
+  { value: "×3", label: "Rétention vs apps actuelles" },
+  { value: "+40%", label: "ARPU avec abos annuels & Lifetime" },
 ];
 
 export const Traction = () => (
   <Section
     id="section-traction"
     testId={NS.sectionTraction}
-    eyebrow="Traction"
-    title="Une bêta qui parle d'elle-même."
-    subtitle="Lancée discrètement en septembre, NutriSnap affiche déjà des courbes que la plupart des apps santé mettent 18 mois à atteindre."
+    eyebrow="Traction & Projections"
+    title="Pas une idée. Une solution prête à scaler."
+    subtitle="MVP déjà fonctionnel à 80%, une trajectoire claire, et un marché qui a déjà prouvé son appétit (Cal AI : 15M+ téléchargements en moins de 2 ans)."
   >
     <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
       {kpis.map((k, i) => (
@@ -39,22 +39,22 @@ export const Traction = () => (
       ))}
     </div>
 
-    {/* Chart */}
+    {/* Chart — MAU projection toward 51k */}
     <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0d] p-6 md:p-8">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <div className="eyebrow">Croissance utilisateurs · MoM</div>
+          <div className="eyebrow">Projection MAU · 12 premiers mois</div>
           <h3 className="mt-2 font-display text-2xl font-semibold text-white">
-            +38% mois sur mois
+            Trajectoire vers 51 000 MAU
           </h3>
         </div>
         <div className="flex items-center gap-4 text-xs text-white/55">
-          <Legend color="bg-mint" label="MAU" />
-          <Legend color="bg-white/30" label="Repas scannés" />
+          <Legend color="bg-mint" label="MAU projeté" />
+          <Legend color="bg-white/30" label="Cible 51k" />
         </div>
       </div>
       <div className="mt-6 grid grid-cols-12 items-end gap-3">
-        {[14, 18, 22, 28, 36, 42, 50, 58, 67, 78, 92, 100].map((h, i) => (
+        {[6, 10, 16, 22, 30, 38, 48, 58, 68, 78, 88, 100].map((h, i) => (
           <motion.div
             key={i}
             initial={{ height: 0 }}
@@ -69,9 +69,19 @@ export const Traction = () => (
         ))}
       </div>
       <div className="mt-3 grid grid-cols-12 text-[10px] uppercase tracking-widest text-white/35">
-        {["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"].map((m, i) => (
-          <div key={i} className="text-center">{m}</div>
-        ))}
+        {["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9", "M10", "M11", "M12"].map(
+          (m, i) => (
+            <div key={i} className="text-center">
+              {m}
+            </div>
+          )
+        )}
+      </div>
+
+      <div className="mt-6 grid gap-3 border-t border-white/10 pt-5 sm:grid-cols-3">
+        <Mini label="ARPU récurrent pondéré" value="6,08 € /mois" />
+        <Mini label="Validation marché" value="Cal AI · 15M+ DL" />
+        <Mini label="Catégorie" value="Health-tech · France" />
       </div>
     </div>
   </Section>
@@ -81,5 +91,16 @@ const Legend = ({ color, label }) => (
   <div className="flex items-center gap-2">
     <span className={`inline-block h-2 w-2 rounded-full ${color}`} />
     {label}
+  </div>
+);
+
+const Mini = ({ label, value }) => (
+  <div>
+    <div className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+      {label}
+    </div>
+    <div className="mt-1 font-display text-base font-semibold text-white">
+      {value}
+    </div>
   </div>
 );

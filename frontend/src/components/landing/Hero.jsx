@@ -28,9 +28,9 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 flex items-center gap-3"
         >
-          <span className="eyebrow">Série Seed · Pre-Launch</span>
+          <span className="eyebrow">Pre-Seed · MVP 80% prêt</span>
           <span className="h-px w-12 bg-white/20" />
-          <span className="text-xs text-white/50">Investor Deck v1.0</span>
+          <span className="text-xs text-white/50">Investor Deck v4.2</span>
         </motion.div>
 
         <div className="grid items-end gap-16 lg:grid-cols-12">
@@ -44,14 +44,15 @@ export const Hero = () => {
               data-testid={NS.heroTitle}
               className="font-display text-5xl font-extrabold leading-[0.95] tracking-tighter text-white sm:text-6xl lg:text-7xl"
             >
-              L'IA qui redéfinit la
+              Votre suivi nutritionnel
               <br />
-              <span className="text-mint mint-text-glow">performance humaine</span>.
+              <span className="text-mint mint-text-glow">sans effort</span>.
             </h1>
             <p className="mt-7 max-w-2xl text-lg text-white/65 leading-relaxed">
-              NutriSnap est le premier co-pilote IA santé & performance. Une
-              photo de votre assiette suffit&nbsp;: macros, micronutriments,
-              charge d'entraînement et sommeil — ajustés en temps réel.
+              NutriSnap est la première app française qui allie une IA
+              propriétaire à une vraie expertise du corps de l'athlète. Une
+              photo&nbsp;= analyse complète&nbsp;: calories, macros et
+              micronutriments instantanément.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -77,9 +78,9 @@ export const Hero = () => {
             </div>
 
             <div className="mt-14 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
-              <Stat value="98%" label="Précision nutritionnelle" />
-              <Stat value="2.5s" label="Latence de scan" />
-              <Stat value="24/7" label="Coach IA personnel" />
+              <Stat value="80%" label="MVP déjà fonctionnel" />
+              <Stat value="51k" label="MAU cible · fin année 1" />
+              <Stat value="×3" label="Rétention vs apps actuelles" />
             </div>
           </motion.div>
 
@@ -163,20 +164,20 @@ const Macro = ({ k, v }) => (
 
 const Marquee = () => {
   const items = [
-    "INSEAD",
-    "Station F",
-    "Wagon",
-    "HEC Ventures",
-    "BPI France",
-    "Y-Combinator Alumni",
-    "EIT Health",
-    "Healthtech Network",
+    "CIQUAL",
+    "Open Food Facts",
+    "Made in France",
+    "Sport de haut niveau",
+    "iOS · Android",
+    "RGPD compliant",
+    "IA propriétaire",
+    "Phase 1 · France",
   ];
   const row = [...items, ...items];
   return (
     <div className="mt-20 overflow-hidden border-y border-white/5 py-6">
       <div className="text-center text-[11px] uppercase tracking-[0.28em] text-white/40">
-        Soutenus & inspirés par
+        Conçu sur des fondations solides
       </div>
       <div className="mt-5 flex w-[200%] gap-14 ns-marquee">
         {row.map((it, i) => (

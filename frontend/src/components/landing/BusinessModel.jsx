@@ -9,44 +9,48 @@ const plans = [
     name: "Free",
     price: "0 €",
     period: "/mois",
-    desc: "Acquisition large. 3 scans/jour, coach IA limité.",
-    perks: ["3 scans / jour", "Macros & qualité", "Historique 7 jours"],
+    desc: "Acquisition large. Idéal pour découvrir et créer une habitude.",
+    perks: [
+      "3 scans / jour",
+      "Calories, macros & micros",
+      "Historique limité à 7 jours",
+    ],
     badge: "Acquisition",
   },
   {
-    name: "Performance",
-    price: "12,99 €",
+    name: "Premium",
+    price: "7,99 €",
     period: "/mois",
-    desc: "Notre cœur de cible : sportifs ambitieux & coachs perso.",
+    desc: "Cœur de monétisation. 49,99 € / an (−48%) pour fidéliser les utilisateurs engagés.",
     perks: [
       "Scans illimités",
-      "Coach IA complet",
-      "Sync Whoop / Apple Health",
-      "Meal planner adaptatif",
+      "Recommandations IA personnalisées",
+      "Statistiques avancées · long terme",
+      "Modes Santé & Performance complets",
     ],
     badge: "Monétisation",
     highlight: true,
   },
   {
-    name: "Coach Pro · B2B",
+    name: "B2B · à venir",
     price: "Sur devis",
     period: "",
-    desc: "Pour coachs, clubs, cliniques de performance. Multi-comptes.",
+    desc: "Clubs, salles, coachs, entreprises et fédérations. Exploration active.",
     perks: [
+      "Multi-comptes & suivi équipe",
       "Tableau de bord coach",
-      "Jusqu'à 200 clients",
-      "API & exports",
-      "White-label optionnel",
+      "Rapports & exports",
+      "Intégration fédérations sportives",
     ],
     badge: "Expansion",
   },
 ];
 
 const economics = [
-  { k: "ARPU cible", v: "9,80 €" },
-  { k: "Marge brute", v: "82%" },
-  { k: "Payback CAC", v: "4,2 mois" },
-  { k: "LTV : CAC", v: "5,1x" },
+  { k: "ARPU récurrent", v: "6,08 € /mo" },
+  { k: "Upside ARPU", v: "+40%" },
+  { k: "Offre Lifetime", v: "99 € · 500 places" },
+  { k: "MAU cible · Y1", v: "51 000" },
 ];
 
 export const BusinessModel = () => (
@@ -54,8 +58,8 @@ export const BusinessModel = () => (
     id="section-business"
     testId={NS.sectionBusiness}
     eyebrow="Business model"
-    title="Freemium B2C × SaaS B2B. Deux moteurs de croissance."
-    subtitle="Acquisition virale côté grand public, monétisation premium individuelle, expansion via les coachs et cliniques de performance."
+    title="Freemium B2C · Premium SaaS · Extension B2B."
+    subtitle="Acquisition massive en gratuit, monétisation via abonnement Premium, fidélisation par offre annuelle et offre fondateur Lifetime. Expansion B2B en année 3."
   >
     <div className="grid gap-5 md:grid-cols-3">
       {plans.map((p, i) => (
@@ -103,14 +107,29 @@ export const BusinessModel = () => (
       ))}
     </div>
 
+    {/* Lifetime offer highlight */}
+    <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-2xl border border-mint/30 bg-mint/[0.06] p-5 md:flex-row md:items-center">
+      <div>
+        <div className="text-[10px] uppercase tracking-[0.22em] text-mint">
+          Offre fondateur · limitée
+        </div>
+        <div className="mt-1 font-display text-xl font-semibold text-white">
+          99 € à vie — 500 premiers utilisateurs
+        </div>
+      </div>
+      <span className="rounded-full border border-mint/40 bg-black/40 px-3 py-1.5 text-xs text-mint">
+        Levier d'acquisition early-adopters
+      </span>
+    </div>
+
     {/* Economics strip */}
-    <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-4">
+    <div className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-4">
       {economics.map((e) => (
         <div key={e.k} className="bg-[#0c0c0d] p-6">
           <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
             {e.k}
           </div>
-          <div className="mt-2 font-display text-3xl font-bold text-white">
+          <div className="mt-2 font-display text-2xl font-bold text-white">
             {e.v}
           </div>
         </div>

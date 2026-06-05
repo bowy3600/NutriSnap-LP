@@ -4,10 +4,10 @@ import { NS } from "@/constants/testIds";
 import { motion } from "framer-motion";
 import {
   Camera,
-  Brain,
-  Moon,
-  Activity,
-  Utensils,
+  Heart,
+  Dumbbell,
+  Sparkles,
+  Watch,
   ShieldCheck,
 } from "lucide-react";
 
@@ -15,37 +15,37 @@ const features = [
   {
     span: "md:col-span-2 md:row-span-2",
     icon: <Camera size={22} />,
-    title: "Vision IA — Scan instantané",
-    text: "Détection multi-aliments, portions, mode de cuisson. Modèle vision propriétaire entraîné sur 4M+ d'images.",
+    title: "Scan IA propriétaire",
+    text: "Une photo suffit. Modèle IA propriétaire fine-tuné sur CIQUAL + Open Food Facts enrichi — précision supérieure sur les aliments et habitudes français & méditerranéens.",
     visual: (
       <div className="absolute right-0 bottom-0 left-0 mx-auto h-2/3 w-full bg-[radial-gradient(circle_at_70%_80%,rgba(110,234,177,0.18),transparent_60%)]" />
     ),
     big: true,
   },
   {
-    icon: <Brain size={22} />,
-    title: "Coach IA contextuel",
-    text: "Recommandations personnalisées selon vos objectifs, votre charge et votre cycle hormonal.",
+    icon: <Heart size={22} />,
+    title: "Mode Santé & Bien-être",
+    text: "Rééquilibrage alimentaire, perte ou maintien de poids. Simple, accessible, sans saisie.",
   },
   {
-    icon: <Activity size={22} />,
-    title: "Performance score",
-    text: "Indice 0–100 mis à jour en temps réel, croisé avec Whoop, Garmin, Apple Health.",
+    icon: <Dumbbell size={22} />,
+    title: "Mode Performance",
+    text: "Optimisation récupération, timing nutritionnel et performance pour sportifs ambitieux (musculation, CrossFit, sports de combat).",
   },
   {
-    icon: <Moon size={22} />,
-    title: "Sommeil & récupération",
-    text: "Recommandations dîner & timing pour optimiser le sommeil profond et la récupération.",
+    icon: <Sparkles size={22} />,
+    title: "Boucle d'apprentissage",
+    text: "L'IA s'améliore avec chaque utilisateur — recommandations plus précises et personnalisées dans le temps.",
   },
   {
-    icon: <Utensils size={22} />,
-    title: "Meal planner adaptatif",
-    text: "Plans de repas générés selon votre frigo, votre budget et vos objectifs hebdo.",
+    icon: <Watch size={22} />,
+    title: "Wearables · Readiness Score",
+    text: "Intégration sommeil, HRV, récupération (Apple Health, Garmin, Whoop) pour un Readiness Score complet.",
   },
   {
     icon: <ShieldCheck size={22} />,
-    title: "Privacy-first",
-    text: "Données chiffrées, hébergement EU, conforme RGPD & HIPAA-ready.",
+    title: "Privacy-first · Made in France",
+    text: "Données chiffrées, hébergement EU, conforme RGPD. Conçu en France, pour la France.",
   },
 ];
 
@@ -54,8 +54,8 @@ export const Features = () => (
     id="section-features"
     testId={NS.sectionFeatures}
     eyebrow="Produit"
-    title="Tout ce qu'il faut pour piloter sa performance. Rien d'autre."
-    subtitle="Une architecture modulaire, branchée sur l'écosystème santé existant (Apple Health, Whoop, Garmin, Oura, Strava)."
+    title="Une seule app. Deux modes. Une IA qui apprend."
+    subtitle="NutriSnap couvre toute la verticale santé : du grand public en rééquilibrage alimentaire jusqu'à l'athlète qui ajuste son timing nutritionnel autour de l'entraînement."
   >
     <div className="grid auto-rows-[200px] gap-4 md:grid-cols-3">
       {features.map((f, i) => (
@@ -90,7 +90,7 @@ export const Features = () => (
             {f.big && (
               <div className="mt-auto pt-6">
                 <div className="grid grid-cols-3 gap-2">
-                  {["Macros", "Micros", "IG", "Allergènes", "Score A+", "Hydratation"].map(
+                  {["Calories", "Macros", "Micros", "Minéraux", "iOS", "Android"].map(
                     (chip) => (
                       <div
                         key={chip}

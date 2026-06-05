@@ -7,21 +7,21 @@ import { AlertTriangle, Clock4, ChartNoAxesCombined, Brain } from "lucide-react"
 const pains = [
   {
     icon: <Clock4 size={20} />,
-    stat: "78%",
-    title: "Abandonnent en 7 jours",
-    text: "Les apps de tracking nutritionnel exigent 15+ min/jour de saisie manuelle. Personne ne tient.",
+    stat: "15 min/j",
+    title: "Saisie manuelle, abandon rapide",
+    text: "Les apps actuelles imposent une saisie longue et contraignante. Résultat : perte d'intérêt après quelques jours et taux d'abandon massif.",
   },
   {
     icon: <ChartNoAxesCombined size={20} />,
-    stat: "1 sur 9",
-    title: "Athlètes connaissent leurs macros",
-    text: "Les sportifs amateurs et pros pilotent leur nutrition à l'aveugle, sans corrélation avec leur performance.",
+    stat: "Imprécis",
+    title: "Données peu fiables",
+    text: "Pour les utilisateurs, les chiffres sont approximatifs. Pour les coachs, la saisie est chronophage et non scalable dans le temps.",
   },
   {
     icon: <Brain size={20} />,
     stat: "0",
-    title: "Coach intégré au quotidien",
-    text: "Aucune solution ne croise nutrition, sommeil, charge sportive et adaptation hormonale en temps réel.",
+    title: "Aucune expertise athlète",
+    text: "Aucune solution n'allie une IA de pointe à une vraie expertise du corps de l'athlète. Le sportif ambitieux pilote à l'aveugle.",
   },
 ];
 
@@ -31,7 +31,7 @@ export const Problem = () => (
     testId={NS.sectionProblem}
     eyebrow="Le problème"
     title="La nutrition est encore pilotée au feeling. Pas la performance."
-    subtitle="80% des sportifs ambitieux n'ont aucune visibilité sur leur charge nutritionnelle réelle. Les outils existants sont lents, manuels et déconnectés de la performance."
+    subtitle="Les apps de suivi nutritionnel actuelles souffrent de limites structurelles : expérience complexe, saisie manuelle, faible engagement. NutriSnap part de zéro avec une approche radicalement plus simple."
   >
     <div className="grid gap-5 md:grid-cols-3">
       {pains.map((p, i) => (
@@ -63,10 +63,10 @@ export const Problem = () => (
         <AlertTriangle size={20} />
       </div>
       <p className="text-sm leading-relaxed text-white/70">
-        <span className="text-white">Le marché de la nutrition connectée explose</span>{" "}
-        — mais reste fragmenté entre apps de tracking (MyFitnessPal), montres
-        (Whoop, Garmin) et coachs humains. Aucun acteur n'a su unifier&nbsp;:{" "}
-        <span className="text-mint">scan instantané + coach IA contextuel</span>.
+        <span className="text-white">Le marché valide déjà le besoin</span> —
+        Cal AI a passé les <span className="text-mint">15M+ téléchargements en moins de 2 ans</span>,
+        Foodvisor a été racheté 50–60M€ fin 2025. Aucun acteur français n'a su
+        unifier <span className="text-mint">scan IA + expertise athlète</span>.
       </p>
     </div>
   </Section>

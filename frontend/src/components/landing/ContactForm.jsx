@@ -8,11 +8,10 @@ import { ArrowUpRight, Loader2, CheckCircle2 } from "lucide-react";
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const ticketOptions = [
-  "< 50k€",
-  "50k€ – 250k€",
-  "250k€ – 1M€",
-  "1M€ – 5M€",
-  "> 5M€",
+  "10k€ – 20k€",
+  "20k€ – 30k€",
+  "30k€ – 40k€",
+  "40k€ – 50k€",
 ];
 
 export const ContactForm = () => {
@@ -60,8 +59,8 @@ export const ContactForm = () => {
       id="section-contact"
       testId={NS.sectionContact}
       eyebrow="Contact investisseur"
-      title="Parlons de la prochaine étape."
-      subtitle="Vous êtes investisseur, family office, ou stratégique health-tech ? Laissez-nous vos coordonnées — nous vous transmettons le pitch deck complet sous 48h."
+      title="Ticket investisseur ouvert · 10k€ – 50k€."
+      subtitle="NutriSnap ouvre un ticket investisseur entre 10 000 € et 50 000 €. Si la vision vous parle et que vous souhaitez participer au lancement, laissez-nous vos coordonnées — nous revenons vers vous avec le pitch deck complet sous 48h."
     >
       <div className="grid gap-10 lg:grid-cols-12">
         {/* Left — info */}
@@ -69,18 +68,18 @@ export const ContactForm = () => {
           <div className="rounded-2xl border border-white/10 bg-[#0c0c0d] p-7">
             <ApertureMark className="h-8 w-8" />
             <h3 className="mt-5 font-display text-2xl font-semibold text-white">
-              Tour de table en cours
+              Ticket investisseur · 10k€ – 50k€
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
-              Série Seed de <span className="text-white">2,5M€</span> ouverte
-              jusqu'au T2 2026. Tickets minoritaires bienvenus, BPI/EIC
-              participations en cours de validation.
+              Un ticket accessible pour participer au lancement d'une app
+              française à forte traction potentielle. Idéal pour business angels,
+              opérateurs santé/sport, family offices early-stage.
             </p>
 
             <div className="mt-6 grid gap-3">
-              <Info k="Lead investor" v="Annoncé · soft circle 60%" />
-              <Info k="Use of funds" v="Équipe IA · acquisition US · brevet vision" />
-              <Info k="Closing prévu" v="Avril 2026" />
+              <Info k="Stade" v="Pre-Seed · MVP 80%" />
+              <Info k="Use of funds" v="Finalisation MVP · acquisition · IA" />
+              <Info k="Cible Y1" v="51 000 MAU" />
             </div>
 
             <div className="mt-7 border-t border-white/10 pt-5 text-xs text-white/45">

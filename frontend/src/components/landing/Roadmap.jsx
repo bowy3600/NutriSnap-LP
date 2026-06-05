@@ -5,31 +5,25 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    q: "Q4 2025",
-    title: "Bêta privée fermée",
-    text: "12k+ utilisateurs, validation produit et premiers contrats coachs.",
+    q: "Aujourd'hui",
+    title: "MVP fonctionnel à 80%",
+    text: "App iOS & Android, IA propriétaire, deux modes (Santé & Performance) — bientôt prêt à scaler.",
     done: true,
   },
   {
-    q: "Q1 2026",
-    title: "Lancement public iOS · France",
-    text: "App Store + intégration Apple Health & Whoop. Premium activé.",
-    done: true,
+    q: "Fin Année 1",
+    title: "Lancement public + wearables",
+    text: "Premières intégrations wearables, suivi sommeil & hydratation basique. Cible : 51 000 MAU.",
   },
   {
-    q: "Q2 2026",
-    title: "Android + B2B Coach Pro",
-    text: "Tableau de bord coachs, premiers déploiements en clubs sportifs.",
+    q: "Année 2",
+    title: "Gamification + Readiness Score",
+    text: "Optimisation performance & récupération, rapports exportables pour coachs et nutritionnistes.",
   },
   {
-    q: "Q3 2026",
-    title: "Expansion EU (UK, DE, ES, IT)",
-    text: "Localisation, partenariats nutritionnistes, croissance MAU x4.",
-  },
-  {
-    q: "Q1 2027",
-    title: "Modèle IA propriétaire v4 · USA",
-    text: "Vision IA next-gen, ouverture aux États-Unis, levée Series A.",
+    q: "Année 3",
+    title: "Coaching IA prédictif + B2B",
+    text: "Plans de repas générés automatiquement, communauté intégrée, déploiement B2B (clubs, salles, fédérations).",
   },
 ];
 
@@ -38,8 +32,8 @@ export const Roadmap = () => (
     id="section-roadmap"
     testId={NS.sectionRoadmap}
     eyebrow="Roadmap"
-    title="Là où nous serons dans 18 mois."
-    subtitle="Une exécution séquencée, focalisée sur la rétention puis l'expansion géographique et B2B."
+    title="Une feuille de route claire, du MVP au scale."
+    subtitle="Une exécution séquencée : finaliser le MVP, valider l'engagement utilisateur, puis enrichir avec wearables, gamification et expansion B2B."
   >
     <div className="relative">
       <div className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-mint/50 via-white/10 to-transparent md:left-1/2" />
@@ -73,7 +67,7 @@ export const Roadmap = () => (
                 }`}
               >
                 <div className="text-[10px] uppercase tracking-[0.22em] text-mint">
-                  {s.q} {s.done && "· livré"}
+                  {s.q} {s.done && "· en cours"}
                 </div>
                 <h3 className="mt-2 font-display text-xl font-semibold text-white">
                   {s.title}

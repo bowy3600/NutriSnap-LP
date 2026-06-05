@@ -9,19 +9,19 @@ const steps = [
     n: "01",
     icon: <Camera size={20} />,
     title: "Snap",
-    text: "Photographiez votre assiette. Notre vision IA détecte les aliments, portions et préparations.",
+    text: "Une simple photo de votre repas ou aliment. Pas de saisie, pas de scan code-barres, pas d'effort.",
   },
   {
     n: "02",
     icon: <Sparkles size={20} />,
-    title: "Analyse",
-    text: "Macros, micros, index glycémique, qualité nutritionnelle — calculés en moins de 3 secondes.",
+    title: "Analyse IA",
+    text: "Modèle IA propriétaire entraîné sur CIQUAL + Open Food Facts. Calories, macros et micronutriments en quelques secondes.",
   },
   {
     n: "03",
     icon: <LineChart size={20} />,
-    title: "Adapte",
-    text: "Le coach IA ajuste votre charge d'entraînement, sommeil cible et hydratation pour les 24h à venir.",
+    title: "Mode adapté",
+    text: "Choisissez votre mode : Santé & Bien-être (rééquilibrage, perte de poids) ou Performance Athlétique (récupération, timing).",
   },
 ];
 
@@ -30,8 +30,8 @@ export const Solution = () => (
     id="section-solution"
     testId={NS.sectionSolution}
     eyebrow="La solution"
-    title={<>Un co-pilote IA. Un capteur&nbsp;: votre téléphone.</>}
-    subtitle="NutriSnap transforme chaque repas en décision de performance. Photo → Données → Insights → Action."
+    title={<>Une photo. L'analyse complète. Deux modes.</>}
+    subtitle="NutriSnap simplifie radicalement le suivi : grand public en mode Santé & Bien-être, sportifs ambitieux en mode Performance. Une seule app, deux usages — pilotée par une IA propriétaire."
   >
     <div className="grid items-stretch gap-6 lg:grid-cols-12">
       {/* Left — visual */}
@@ -51,15 +51,14 @@ export const Solution = () => (
           <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/40 to-transparent" />
 
           {/* Floating chips */}
-          <FloatingChip className="left-6 top-6" label="Détecté" value="Saumon · Quinoa · Avocat" />
+          <FloatingChip className="left-6 top-6" label="Mode" value="Performance" highlight />
           <FloatingChip
             className="right-6 top-6"
-            label="Qualité"
-            value="A+"
-            highlight
+            label="Micronutriments"
+            value="Fer · Mg · B12"
           />
           <FloatingChip className="left-6 bottom-6" label="Protéines" value="38 g" />
-          <FloatingChip className="right-6 bottom-6" label="Recovery score" value="92" highlight />
+          <FloatingChip className="right-6 bottom-6" label="IA propriétaire" value="CIQUAL+" highlight />
         </div>
       </motion.div>
 
