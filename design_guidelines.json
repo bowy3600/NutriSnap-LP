@@ -1,0 +1,130 @@
+{
+  "theme": "dark",
+  "archetype": "Performance Pro with Luxury High-Contrast (Archetype 2 + 5)",
+  "colors": {
+    "background": "#050505",
+    "surface": "#0A0A0A",
+    "surface_elevated": "#121212",
+    "primary": "#6EEAB1",
+    "primary_glow": "rgba(110, 234, 177, 0.4)",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "#27272A"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Manrope",
+    "h1": "text-5xl sm:text-6xl tracking-tighter font-bold",
+    "h2": "text-3xl sm:text-4xl tracking-tight font-semibold",
+    "h3": "text-xl sm:text-2xl font-medium",
+    "body": "text-base sm:text-lg text-text_secondary leading-relaxed",
+    "label": "text-xs uppercase tracking-[0.2em] text-primary"
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "grid_system": "Bento Grid Protocol (Control Room & Tetris Hybrid for Pitch Deck)",
+    "border_radius": "rounded-2xl",
+    "card_padding": "p-8"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#6EEAB1] text-black font-semibold rounded-full px-6 py-3 hover:bg-[#5CE0A1] transition-all shadow-[0_0_20px_rgba(110,234,177,0.3)] hover:shadow-[0_0_30px_rgba(110,234,177,0.5)]",
+      "secondary": "bg-transparent border border-[#27272A] text-white font-semibold rounded-full px-6 py-3 hover:border-[#6EEAB1] hover:text-[#6EEAB1] transition-all"
+    },
+    "cards": {
+      "style": "bg-[#121212] border border-[#27272A] rounded-2xl p-8 relative overflow-hidden",
+      "hover_effect": "hover:border-[#6EEAB1]/50 transition-colors group"
+    },
+    "glassmorphism": {
+      "header": "backdrop-blur-xl bg-black/60 border-b border-white/10"
+    }
+  },
+  "motion_and_interactions": {
+    "scroll_reveal": "framer-motion initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}}",
+    "stagger_children": "framer-motion variants for lists and grid items",
+    "hover_glow": "Add blur-md behind primary elements for a kinetic trigger effect"
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "style": "duotone for premium tech feel"
+  },
+  "media": {
+    "logo": "https://customer-assets.emergentagent.com/job_d6d7b202-4a4a-417a-a4cc-51464826ee5e/artifacts/wb9ixy0o_NutriSnap%20logo%202.png",
+    "hero_background": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjB0ZXh0dXJlfGVufDB8fHx8MTc4MDY2MDI1M3ww&ixlib=rb-4.1.0&q=85",
+    "abstract_texture": "https://images.pexels.com/photos/6485524/pexels-photo-6485524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "product_context_1": "https://images.pexels.com/photos/20901478/pexels-photo-20901478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "product_context_2": "https://images.unsplash.com/photo-1648235692910-947cb90ddd97?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxhdGhsZXRlJTIwdHJhaW5pbmclMjBkYXJrfGVufDB8fHx8MTc4MDY2MDI1M3ww&ixlib=rb-4.1.0&q=85",
+    "team_member_1": "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "team_member_2": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODA2NjAyNTN8MA&ixlib=rb-4.1.0&q=85",
+    "team_member_3": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODA2NjAyNTN8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "sections": [
+    {
+      "name": "Header",
+      "content": "Logo + Nav (Le Problème, La Solution, Marché, Équipe) + CTA 'Contact Investisseur'",
+      "design_rules": "Sticky glassmorphism header, z-50. Nav links white hover to mint green."
+    },
+    {
+      "name": "Hero",
+      "content": "Tagline: 'L\\'IA qui redéfinit la performance humaine.' Dual CTA: 'Voir la Démo' (Primary), 'Pitch Deck' (Secondary)",
+      "design_rules": "Deep black background with subtle abstract texture (hero_background) and mint green glowing orb overlay in background. H1 left aligned or centered, max width."
+    },
+    {
+      "name": "Problem",
+      "content": "Why current nutrition tracking fails: manual entry is dead. Athletes guess their data.",
+      "design_rules": "High contrast typography. Large stats. Use 'Tracing Beam' effect on cards."
+    },
+    {
+      "name": "Solution",
+      "content": "NutriSnap: Snap a meal, AI analyzes macros, adjusts sleep schedule and training load instantly.",
+      "design_rules": "Product-led. Dark UI mockups or bento grid showing 'Photo -> Data -> Insights'."
+    },
+    {
+      "name": "Market (TAM/SAM/SOM)",
+      "content": "Placeholder numbers for Health/Tech market.",
+      "design_rules": "Data visualization style. Concentric circles or overlapping glowing rectangles using #6EEAB1."
+    },
+    {
+      "name": "Product Features",
+      "content": "Bento Grid: Photo Scan, AI Coach, Sleep tracking, Performance integration.",
+      "design_rules": "Control Room Grid. Dense, tech-forward. 1px borders with hover glows."
+    },
+    {
+      "name": "Traction",
+      "content": "Placeholder KPIs: Beta users, retention rate, accuracy.",
+      "design_rules": "Dashboard-style cards. Big numbers (text-5xl) in Cabinet Grotesk, Mint Green color."
+    },
+    {
+      "name": "Business Model",
+      "content": "Freemium / B2B Coaches / Subscription tiers.",
+      "design_rules": "Clean table or metric blocks. Grid borders."
+    },
+    {
+      "name": "Team",
+      "content": "Founders with past exits/expertise.",
+      "design_rules": "Professional headshots in grayscale with mint green hover accent."
+    },
+    {
+      "name": "Roadmap",
+      "content": "Timeline of milestones.",
+      "design_rules": "Vertical timeline with mint green glowing dots as nodes."
+    },
+    {
+      "name": "Investor Contact Form",
+      "content": "Functional form to request full pitch deck or meeting.",
+      "design_rules": "Shadcn form. Dark inputs, mint green focus rings."
+    },
+    {
+      "name": "Footer",
+      "content": "Copyright, links, minimal.",
+      "design_rules": "Massive space py-24. Dark grey text."
+    }
+  ],
+  "accessibility_and_testing": {
+    "testing_attributes": "All interactive elements MUST include data-testid (e.g., data-testid='hero-cta-investor')",
+    "contrast": "Ensure white text on #0A0A0A passes APCA. Mint green #6EEAB1 used for accents/buttons with dark text.",
+    "motion": "Respect prefers-reduced-motion."
+  },
+  "instructions_to_main_agent": "Use HTML+Tailwind for layouts, Shadcn for interactive UI (Forms). Do NOT use generic purple/blue gradients. Strictly use #0A0A0A background and #6EEAB1 for all glowing accents. Keep the aesthetic 'Investor Pitch'—clean, scannable, and premium. Implement all sections in French as requested."
+}
