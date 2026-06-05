@@ -1,7 +1,7 @@
 import React from "react";
 
 export const LOGO_URL =
-  "https://customer-assets.emergentagent.com/job_d6d7b202-4a4a-417a-a4cc-51464826ee5e/artifacts/wb9ixy0o_NutriSnap%20logo%202.png";
+  "https://customer-assets.emergentagent.com/job_nutrisnap-demo/artifacts/el4fk3hy_NutriSnap%20logo%203.png";
 
 export const Logo = ({ className = "h-9 w-auto" }) => (
   <img
