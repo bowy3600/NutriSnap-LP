@@ -176,7 +176,7 @@ export const ContactForm = () => {
               ) : (
                 <ArrowUpRight size={16} />
               )}
-              {status.loading ? "Envoi en cours…" : "Recevoir le pitch deck"}
+              {status.loading ? "Envoi en cours…" : "Envoyer ma demande"}
             </button>
 
             {status.ok && (
